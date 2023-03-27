@@ -1,0 +1,128 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --color-green: #0a806e;
+  --color-gray-light: #f3f3f3;
+  --color-gray-light2: #c9c8c8;
+  --color-blue: #020074;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  height: 4000vh;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  padding: 0.8rem 4rem;
+  background-color: var(--color-gray-light);
+  border-radius: 0 0 5px 5px;
+  border-top: 1px solid var(--color-green);
+  box-shadow: 0 0.5rem 1.5rem var(--color-gray-light2);
+}
+
+.icon {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-green),
+    var(--color-blue)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navbar_item {
+  padding-left: 2rem;
+  list-style: none;
+}
+
+.navbar_item--link {
+  display: inline-block;
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--color-green);
+  border: 1px solid var(--color-gray-light);
+  cursor: pointer;
+  padding: 0.5rem 3rem;
+  transition: all 0.3s ease;
+}
+
+.navbar_item--link:hover {
+  color: var(--color-blue);
+  border: 1px solid var(--color-blue);
+}
+
+.active {
+  color: var(--color-blue);
+  border: 1px solid var(--color-blue);
+}
+/* respond */
+@media screen and (max-width: 112rem) {
+  html {
+    font-size: 75%;
+  }
+}
+@media screen and (max-width: 75rem) {
+  html {
+    font-size: 56.5%;
+  }
+}
+@media screen and (max-width: 56.25rem) {
+  html {
+    font-size: 56.5%;
+  }
+  .icon {
+    padding: 2rem 0 2rem 2rem;
+  }
+  nav {
+    height: 100vh;
+    width: 20rem;
+    flex-direction: column;
+    align-items: start;
+    justify-content: stretch;
+    padding: 0;
+    border-radius: 0;
+    border-top: 1px solid var(--color-green);
+  }
+  .navbar {
+    margin-top: 2rem;
+    flex-direction: column;
+    align-items: start;
+  }
+  .navbar_item--link {
+    margin: 2rem 0;
+    padding: 0.5rem 5rem 0.5rem 1rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 50%;
+  }
+}
