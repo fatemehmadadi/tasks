@@ -1,0 +1,128 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --font-color: #a1a1a1;
+  --c-blue: #71a4f1;
+  --c-blue-light: #c2d9fa;
+  --c-gray-light: #fcfcfc;
+  --c-gray-dark: #4d4d4d9f;
+  --c-white: #ffffff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--c-blue);
+  color: var(--font-color);
+}
+.form_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 30rem;
+  height: 40rem;
+  border-radius: 2rem;
+  box-shadow: 0 1.5rem 1.5rem var(--c-gray-dark);
+  background-color: var(--c-gray-light);
+  padding: 4rem 2rem;
+}
+
+.form_box h3 {
+  text-transform: capitalize;
+}
+.form_box h3 span {
+  color: var(--c-blue);
+}
+.form_box form {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 60%;
+  width: 100%;
+  flex-direction: column;
+}
+.form_box form input {
+  font-size: 1.2rem;
+  font-family: inherit;
+  font-weight: 600;
+  width: 100%;
+  height: 3rem;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  border-bottom: 2px solid var(--c-blue);
+  caret-color: var(--c-blue);
+  padding: 0 1rem;
+}
+
+.form_box form button {
+  font-weight: 600;
+  width: 100%;
+  height: 3rem;
+  cursor: pointer;
+  color: var(--c-white);
+  background-image: linear-gradient(
+    to left,
+    var(--c-blue),
+    var(--c-blue-light)
+  );
+  border: none;
+  border-radius: 3px;
+  margin-top: 2rem;
+  transition: all 0.2s;
+}
+.form_box form button:hover {
+  transform: translateY(-0.3rem);
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 20%;
+}
+.account a {
+  color: var(--font-color);
+  padding: 0.5rem 0;
+  text-decoration: none;
+}
+.account a:hover {
+  color: var(--c-blue);
+}
+
+/* respond */
+@media screen and (max-width: 112rem) {
+  html {
+    font-size: 75%;
+  }
+}
+@media screen and (max-width: 50rem) {
+  html {
+    font-size: 56.5%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 50%;
+  }
+}
